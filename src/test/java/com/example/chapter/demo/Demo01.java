@@ -65,5 +65,4 @@ public class Demo01 {
 
         log.info("正确用法02,jdk推荐使用:------------ {}",result);
     }
-
 }
