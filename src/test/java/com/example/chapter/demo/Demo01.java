@@ -17,7 +17,7 @@ public class Demo01 {
         double number1 = 10.2;
         double number2 = 300.03;
         double result = number1 + number2;
-
+//        System.out.println("错误用法01:------------ " + result);
         log.info("错误用法01:------------ {}",result);
     }
 
