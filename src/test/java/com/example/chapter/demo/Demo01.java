@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 
+/**
+ * double精度丢失问题
+ */
 public class Demo01 {
     private static final Logger log = LoggerFactory.getLogger(Demo01.class);
 
