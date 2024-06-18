@@ -38,22 +38,22 @@
         </rollingPolicy>
     </appender>
 
-<!--    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
-<!--            <level>ERROR</level>-->
-<!--        </filter>-->
-<!--        <encoder>-->
-<!--            <pattern>-->
-<!--                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n-->
-<!--            </pattern>-->
-<!--        </encoder>-->
-<!--        &lt;!&ndash;滚动策略&ndash;&gt;-->
-<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-<!--            &lt;!&ndash;路径&ndash;&gt;-->
-<!--            <fileNamePattern>${logging.path}/chapter.error.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-<!--            <MaxHistory>90</MaxHistory>-->
-<!--        </rollingPolicy>-->
-<!--    </appender>-->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>${logging.path}/chapter.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <MaxHistory>90</MaxHistory>
+        </rollingPolicy>
+    </appender>
 
     <root level="info">
         <appender-ref ref="consoleLog"/>
