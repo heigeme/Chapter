@@ -22,13 +22,13 @@ public class Chapter3 {
     public String test1(){
         String result = "文科生说Java欢迎您!";
         try{
-            log.info("{} 我是 try 我执行了",result);
+            log.info("{} 我是 try模块 我执行了",result);
         }catch (Exception e){
-            log.info("{} 我是 catch 我执行了",result);
+            log.info("{} 我是 catch模块 我执行了",result);
         }finally {
-            log.info("{} 我是 finally 我执行了",result);
+            log.info("{} 我是 finally模块 我执行了",result);
         }
-        log.info("{} 我是 程序末尾 我执行了",result);
+        log.info("{} 我是 程序末尾行 我执行了",result);
         return result;
     }
 
@@ -41,13 +41,13 @@ public class Chapter3 {
         String result = "文科生说Java欢迎您!";
         try{
             System.out.println(1/0);
-            log.info("{} 我是 try 我执行了",result);
+            log.info("{} 我是 try模块 我执行了",result);
         }catch (Exception e){
-            log.info("{} 我是 catch 我执行了",result);
+            log.info("{} 我是 catch模块 我执行了",result);
         }finally {
-            log.info("{} 我是 finally 我执行了",result);
+            log.info("{} 我是 finally模块 我执行了",result);
         }
-        log.info("{} 我是 程序末尾 我执行了",result);
+        log.info("{} 我是 程序末尾行 我执行了",result);
         return result;
     }
 
@@ -59,14 +59,14 @@ public class Chapter3 {
     public String test3(){
         String result = "文科生说Java欢迎您!";
         try{
-            log.info("{} 我是 try 我执行了",result);
-            return result + " 我是 try 返回";
+            log.info("{} 我是 try模块 我执行了",result);
+            return result + " 我是 try模块 返回";
         }catch (Exception e){
-            log.info("{} 我是 catch 我执行了",result);
+            log.info("{} 我是 catch模块 我执行了",result);
         }finally {
-            log.info("{} 我是 finally 我执行了",result);
+            log.info("{} 我是 finally模块 我执行了",result);
         }
-        log.info("{} 我是 程序末尾 我执行了",result);
+        log.info("{} 我是 程序末尾行 我执行了",result);
         return result;
     }
 
@@ -78,13 +78,13 @@ public class Chapter3 {
     public String test4(){
         String result = "文科生说Java欢迎您!";
         try{
-            log.info("{} 我是 try 我执行了",result);
-            return result + " 我是 try 返回";
+            log.info("{} 我是 try模块 我执行了",result);
+            return result + " 我是 try模块 返回";
         }catch (Exception e){
-            log.info("{} 我是 catch 我执行了",result);
+            log.info("{} 我是 catch模块 我执行了",result);
         }finally {
-            log.info("{} 我是 finally 我执行了",result);
-            return result + " 我是 finally 返回";
+            log.info("{} 我是 finally模块 我执行了",result);
+            return result + " 我是 finally模块 返回";
         }
     }
 
@@ -97,14 +97,14 @@ public class Chapter3 {
         String result = "文科生说Java欢迎您!";
         try{
             System.out.println(1/0);
-            log.info("{} 我是 try 我执行了",result);
-            return result + " 我是 try 返回";
+            log.info("{} 我是 try模块 我执行了",result);
+            return result + " 我是 try模块 返回";
         }catch (Exception e){
-            log.info("{} 我是 catch 我执行了",result);
-            return result + " 我是 catch 返回";
+            log.info("{} 我是 catch模块 我执行了",result);
+            return result + " 我是 catch模块 返回";
         }finally {
-            log.info("{} 我是 finally 我执行了",result);
-            return result + " 我是 finally 返回";
+            log.info("{} 我是 finally模块 我执行了",result);
+            return result + " 我是 finally模块 返回";
         }
     }
 
