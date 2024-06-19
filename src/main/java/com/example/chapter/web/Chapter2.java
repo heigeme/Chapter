@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 日志打印问题
+ * 第2节-日志打印问题
  */
 @RestController
-public class Demo02 {
+@RequestMapping(value = "chapter2")
+public class Chapter2 {
 
-    private static final Logger log = LoggerFactory.getLogger(Demo02.class);
+    private static final Logger log = LoggerFactory.getLogger(Chapter2.class);
 
     /**
      * 错误用法01 打印方式不对
@@ -21,7 +22,7 @@ public class Demo02 {
     public String error1(){
         String result = "文科生说Java";
         System.out.println("错误用法01 欢迎来到:------------ " + result);
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -33,7 +34,7 @@ public class Demo02 {
         String result = "文科生说Java";
         log.trace("错误用法02 trace 欢迎来到:------------ " + result);
         log.debug("错误用法03 debug 欢迎来到:------------ " + result);
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -49,7 +50,7 @@ public class Demo02 {
         }catch (Exception e){
             e.printStackTrace();
         }
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -65,7 +66,7 @@ public class Demo02 {
         }catch (Exception e){
             log.error(e.getMessage());
         }
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -77,7 +78,7 @@ public class Demo02 {
         int a = 1;
         int b = 2;
         log.info("错误用法05: 关键变量:" + a + " 关键变量:" + b);
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -89,7 +90,7 @@ public class Demo02 {
         String result = "文科生说Java";
         log.info("正确用法01 info 欢迎来到:------------ {}",result);
         log.error("正确用法01 error 欢迎来到:------------ {}",result);
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -105,7 +106,7 @@ public class Demo02 {
         }catch (Exception e){
             log.error(e.getMessage(),e);
         }
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 
     /**
@@ -117,6 +118,6 @@ public class Demo02 {
         int a = 1;
         int b = 2;
         log.info("正确用法03: 关键变量:{} 关键变量:{}", a, b);
-        return "SUCESS";
+        return "文科生说Java欢迎您!";
     }
 }
