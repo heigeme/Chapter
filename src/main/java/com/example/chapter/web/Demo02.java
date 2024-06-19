@@ -42,9 +42,9 @@ public class Demo02 {
      */
     @RequestMapping(value = "error3")
     public String error3(){
+        int a = 1;
+        int b = 0;
         try{
-            int a = 1;
-            int b = 0;
             int i = a / b;
         }catch (Exception e){
             e.printStackTrace();
@@ -58,9 +58,9 @@ public class Demo02 {
      */
     @RequestMapping(value = "error4")
     public String error4(){
+        int a = 1;
+        int b = 0;
         try{
-            int a = 1;
-            int b = 0;
             int i = a / b;
         }catch (Exception e){
             log.error(e.getMessage());
@@ -98,9 +98,9 @@ public class Demo02 {
      */
     @RequestMapping(value = "correct2")
     public String correct2(){
+        int a = 1;
+        int b = 0;
         try{
-            int a = 1;
-            int b = 0;
             int i = a / b;
         }catch (Exception e){
             log.error(e.getMessage(),e);
