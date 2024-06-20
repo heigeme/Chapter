@@ -108,5 +108,22 @@ public class Chapter3 {
         }
     }
 
+    /**
+     *  有 return 有异常 没有finally 情况下的代码执行顺序
+     * @return
+     */
+    @RequestMapping(value = "test6")
+    public String test6(){
+        String result = "文科生说Java欢迎您!";
+        try{
+            System.out.println(1/0);
+            log.info("{} 我是 try模块 我执行了",result);
+            return result + " 我是 try模块 返回";
+        }catch (Exception e){
+            log.info("{} 我是 catch模块 我执行了",result);
+            return result + " 我是 catch模块 返回";
+        }
+    }
+
 
 }
