@@ -19,7 +19,7 @@ public class Chapter4 {
     private static final Logger log = LoggerFactory.getLogger(Chapter4.class);
 
     /**
-     *  方法1 finally中没有return时,基本数据类型值
+     *  方法1 finally中没有return时,基本数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test1")
@@ -36,7 +36,7 @@ public class Chapter4 {
     }
 
     /**
-     *  方法2 finally中没有return时,String数据类型
+     *  方法2 finally中没有return时,String数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test2")
@@ -53,7 +53,7 @@ public class Chapter4 {
     }
 
     /**
-     *  方法3 finally中没有return时,对象数据类型
+     *  方法3 finally中没有return时,对象数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test3")
@@ -72,18 +72,26 @@ public class Chapter4 {
     }
 
     /**
-     *  方法4 finally中没有return时,list数据类型
+     *  方法4 finally中没有return时,list数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test4")
-    public List<String> test4(){
-        List<String> list = new ArrayList<>();
+    public List<Person> test4(){
+        List<Person> list = new ArrayList<>();
         try{
-            list.add("文科生说Java try");
+            Person person = new Person();
+            person.setName("文科生说Java try");
+            person.setAge(30);
+            list.add(person);
+
             log.info("文科生说Java try中 list: {}", list);
             return list;
         }finally {
-            list.add("文科生说Java finally");
+            Person person = new Person();
+            person.setName("文科生说Java finally");
+            person.setAge(40);
+            list.add(person);
+
             log.info("文科生说Java finally中 list: {}", list);
         }
     }
@@ -94,19 +102,26 @@ public class Chapter4 {
      */
     @RequestMapping(value = "test5")
     public int test5(){
-        List<String> list = new ArrayList<>();
+        List<Person> list = new ArrayList<>();
         try{
-            list.add("文科生说Java try");
+            Person person = new Person();
+            person.setName("文科生说Java try");
+            person.setAge(30);
+            list.add(person);
+
             log.info("文科生说Java try中 list size: {}", list.size());
             return list.size();
         }finally {
-            list.add("文科生说Java finally");
+            Person person = new Person();
+            person.setName("文科生说Java finally");
+            person.setAge(40);
+            list.add(person);
             log.info("文科生说Java finally中 list size: {}", list.size());
         }
     }
 
     /**
-     *  方法6 finally中有return时,基本数据类型值
+     *  方法6 finally中有return时,基本数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test6")
@@ -124,7 +139,7 @@ public class Chapter4 {
     }
 
     /**
-     *  方法7 finally中有return时,String数据类型
+     *  方法7 finally中有return时,String数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test7")
@@ -142,7 +157,7 @@ public class Chapter4 {
     }
 
     /**
-     *  方法8 finally中有return时,对象数据类型
+     *  方法8 finally中有return时,对象数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test8")
@@ -162,18 +177,26 @@ public class Chapter4 {
     }
 
     /**
-     *  方法9 finally中有return时,list数据类型
+     *  方法9 finally中有return时,list数据类型值的变化
      * @return
      */
     @RequestMapping(value = "test9")
-    public List<String> test9(){
-        List<String> list = new ArrayList<>();
+    public List<Person> test9(){
+        List<Person> list = new ArrayList<>();
         try{
-            list.add("文科生说Java try");
+            Person person = new Person();
+            person.setName("文科生说Java try");
+            person.setAge(30);
+            list.add(person);
+
             log.info("文科生说Java try中 list: {}", list);
             return list;
         }finally {
-            list.add("文科生说Java finally");
+            Person person = new Person();
+            person.setName("文科生说Java finally");
+            person.setAge(40);
+            list.add(person);
+
             log.info("文科生说Java finally中 list: {}", list);
             return list;
         }
